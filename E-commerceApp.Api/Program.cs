@@ -158,7 +158,7 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddCors(p => p.AddPolicy("cors", build =>
 {
-    build.WithOrigins("https://react-ecommerce-beryl.vercel.app/").AllowAnyMethod().AllowAnyHeader();
+    build.WithOrigins("https://react-ecommerce-beryl.vercel.app").AllowAnyMethod().AllowAnyHeader();
 }));
 
 
