@@ -153,13 +153,12 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-//builder.Services.AddCors(opt => opt.AddDefaultPolicy(policy =>
-//    policy.WithOrigins("https://react-ecommerce-zvvh.vercel.app/")));
+
 
 
 builder.Services.AddCors(p => p.AddPolicy("cors", build =>
 {
-    build.WithOrigins("https://react-ecommerce-7lvjrjx8t-codes-projects-88be318f.vercel.app/").AllowAnyMethod().AllowAnyHeader();
+    build.WithOrigins("https://react-ecommerce-beryl.vercel.app/").AllowAnyMethod().AllowAnyHeader();
 }));
 
 
