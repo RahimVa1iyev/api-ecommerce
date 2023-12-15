@@ -1,0 +1,17 @@
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\bin\Release\net6.0\E-commerceApp.Service.deps.json
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\bin\Release\net6.0\E-commerceApp.Service.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\bin\Release\net6.0\E-commerceApp.Service.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\bin\Release\net6.0\E-commerceApp.Core.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\bin\Release\net6.0\E-commerceApp.Data.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\bin\Release\net6.0\E-commerceApp.Data.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\bin\Release\net6.0\E-commerceApp.Core.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.csproj.CopyComplete
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\refint\E-commerceApp.Service.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\E-commerceApp.Service.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Service\obj\Release\net6.0\ref\E-commerceApp.Service.dll

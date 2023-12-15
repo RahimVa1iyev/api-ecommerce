@@ -1,0 +1,12 @@
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\bin\Debug\net6.0\E-commerceApp.Core.deps.json
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\bin\Debug\net6.0\E-commerceApp.Core.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\bin\Debug\net6.0\E-commerceApp.Core.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\E-commerceApp.Core.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\E-commerceApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\E-commerceApp.Core.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\E-commerceApp.Core.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\E-commerceApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\E-commerceApp.Core.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\refint\E-commerceApp.Core.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\E-commerceApp.Core.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Core\obj\Debug\net6.0\ref\E-commerceApp.Core.dll

@@ -1,0 +1,3625 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "E-commerceApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Accounts/createrole": {
+      "get": {
+        "tags": [
+          "Accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Accounts/login": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AccountLoginDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Accounts": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AccountCreateAdminDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Accounts/all": {
+      "get": {
+        "tags": [
+          "Accounts"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AccountAdminGetDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Accounts/{id}": {
+      "delete": {
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Accounts/count": {
+      "get": {
+        "tags": [
+          "Accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Brands/{id}": {
+      "get": {
+        "tags": [
+          "Brands"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/BrandGetDto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Brands"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/BrandPutDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Brands/all": {
+      "get": {
+        "tags": [
+          "Brands"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/BrandGetAllDto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Brands": {
+      "post": {
+        "tags": [
+          "Brands"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/BrandPostDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Brands"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/BrandGetPaginatedDtoPaginatedListDto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Categories/{id}": {
+      "get": {
+        "tags": [
+          "Categories"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/CategoryGetDto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Categories"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CategoryPutDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Categories/all": {
+      "get": {
+        "tags": [
+          "Categories"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CategoryGetAllDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Categories": {
+      "post": {
+        "tags": [
+          "Categories"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CategoryPostDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Charts/montlysales": {
+      "get": {
+        "tags": [
+          "Charts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Charts/count": {
+      "get": {
+        "tags": [
+          "Charts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Charts/income": {
+      "get": {
+        "tags": [
+          "Charts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Colors/{id}": {
+      "get": {
+        "tags": [
+          "Colors"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ColorGetDto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Colors"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ColorPutDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Colors"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Colors/all": {
+      "get": {
+        "tags": [
+          "Colors"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ColorGetAllDto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Colors": {
+      "post": {
+        "tags": [
+          "Colors"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ColorPostDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Contacts": {
+      "post": {
+        "tags": [
+          "Contacts"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ContactSendMessageDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Contacts/all": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Contacts/{id}": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Contacts/response": {
+      "post": {
+        "tags": [
+          "Contacts"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ContactResponseMessageDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Features/all": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Features": {
+      "post": {
+        "tags": [
+          "Features"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "FTitle",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "STitle",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "TTitle",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Desc",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "ImageUri",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Genders/all": {
+      "get": {
+        "tags": [
+          "Genders"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/GenderGetAllDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Infos/all": {
+      "get": {
+        "tags": [
+          "Infos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Offers/all": {
+      "get": {
+        "tags": [
+          "Offers"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Offers": {
+      "post": {
+        "tags": [
+          "Offers"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "Title",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Desc",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Icon",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/checkout": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders": {
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/OrderCreateDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/all": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/dash-all": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/orderitems/{id}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/accepted/{id}": {
+      "put": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/rejected/{id}": {
+      "put": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/{id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ProductGetDto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "BrandId",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "CategoryId",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Gender",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Desc",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "SalePrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "formData",
+            "name": "CostPrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "formData",
+            "name": "DiscountedPrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "formData",
+            "name": "IsNew",
+            "type": "boolean"
+          },
+          {
+            "in": "formData",
+            "name": "IsFeatured",
+            "type": "boolean"
+          },
+          {
+            "in": "formData",
+            "name": "StockStatus",
+            "type": "boolean"
+          },
+          {
+            "in": "formData",
+            "name": "PosterFile",
+            "type": "file"
+          },
+          {
+            "in": "formData",
+            "name": "HoverFile",
+            "type": "file"
+          },
+          {
+            "in": "formData",
+            "name": "ImageFiles",
+            "type": "array",
+            "items": {
+              "format": "binary",
+              "type": "string"
+            }
+          },
+          {
+            "in": "formData",
+            "name": "SizeIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "formData",
+            "name": "ColorIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "formData",
+            "name": "ImageIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/all": {
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ProductGetPaginatedDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductGetAllDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Products": {
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "BrandId",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "CategoryId",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Gender",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Desc",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "SalePrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "formData",
+            "name": "CostPrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "formData",
+            "name": "DiscountedPrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "formData",
+            "name": "IsNew",
+            "type": "boolean"
+          },
+          {
+            "in": "formData",
+            "name": "IsFeatured",
+            "type": "boolean"
+          },
+          {
+            "in": "formData",
+            "name": "StockStatus",
+            "type": "boolean"
+          },
+          {
+            "in": "formData",
+            "name": "PosterFile",
+            "type": "file"
+          },
+          {
+            "in": "formData",
+            "name": "HoverFile",
+            "type": "file"
+          },
+          {
+            "in": "formData",
+            "name": "ImageFiles",
+            "type": "array",
+            "items": {
+              "format": "binary",
+              "type": "string"
+            }
+          },
+          {
+            "in": "formData",
+            "name": "SizeIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "formData",
+            "name": "ColorIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/review": {
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ProductCreateReviewDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/review/{id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductGetReviewDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/detail/{id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/discounted": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductGetDicountedDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/new": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductGetNewDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/featured": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductGetFeaturedDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/mostview": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductGetMostViewDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/modal/{id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ProductGetModalDto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/compare/{id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ProductGetCompareModalDto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/best-seller": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ProductGetBestSellerDto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/shop": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductGetShopPrDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Products/export-excel": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Shops": {
+      "post": {
+        "tags": [
+          "Shops"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ShopCreateDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Shops"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Page",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "PerPage",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Gender"
+          },
+          {
+            "in": "query",
+            "name": "CategoryIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "BrandIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "SideIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ColorIds",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "MinPrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "query",
+            "name": "MaxPrice",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ShopPaginatedDtoPaginatedListDto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Shops/all": {
+      "get": {
+        "tags": [
+          "Shops"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Shops/{id}": {
+      "delete": {
+        "tags": [
+          "Shops"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sizes/{id}": {
+      "get": {
+        "tags": [
+          "Sizes"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SizeGetDto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Sizes"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/SizePutDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sizes"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sizes/all": {
+      "get": {
+        "tags": [
+          "Sizes"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SizeGetAllDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sizes": {
+      "post": {
+        "tags": [
+          "Sizes"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/SizePostDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sliders": {
+      "post": {
+        "tags": [
+          "Sliders"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "Title",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "SecondTitle",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Description",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "ButtonUrl",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Order",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "ButtonText",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "BgColor",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "ImageFile",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sliders/all": {
+      "get": {
+        "tags": [
+          "Sliders"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SliderGetAllDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sliders/{id}": {
+      "get": {
+        "tags": [
+          "Sliders"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SliderGetDto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Sliders"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Title",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "SecondTitle",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Description",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "ButtonUrl",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "ButtonText",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Order",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "BgColor",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "ImageFile",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sliders"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/register": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserRegisterDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserLoginDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/EmailConfirm": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserConfirmDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/AgainEmailConfirm": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserSendAgainDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserGetDto"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserProfileDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/forgot-password": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserForgotPasswordDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/reset-password": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserResetPasswordDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AccountAdminGetDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "role": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "AccountCreateAdminDto": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "AccountLoginDto": {
+      "type": "object",
+      "properties": {
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "BrandGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "BrandGetDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "BrandGetPaginatedDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "BrandGetPaginatedDtoPaginatedListDto": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BrandGetPaginatedDto"
+          }
+        },
+        "pageIndex": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "totalPages": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "havNext": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "havPrev": {
+          "type": "boolean",
+          "readOnly": true
+        }
+      }
+    },
+    "BrandInProductGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "BrandInProductGetDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "BrandInProductGetModalDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "BrandInProductGetShopPrDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "BrandPostDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "BrandPutDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "CategoryGetDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "CategoryInProductGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryInProductGetDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryInProductGetModalDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryInProductGetShopPrDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryPostDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryPutDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ColorGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ColorGetDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ColorInProductGetAllDto": {
+      "type": "object",
+      "properties": {
+        "colorId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ColorInProductGetDto": {
+      "type": "object",
+      "properties": {
+        "colorId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ColorInProductGetModalDto": {
+      "type": "object",
+      "properties": {
+        "colorId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ColorPostDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ColorPutDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ContactResponseMessageDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "response": {
+          "type": "string"
+        }
+      }
+    },
+    "ContactSendMessageDto": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "GenderGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gender": {
+          "type": "string"
+        }
+      }
+    },
+    "GenderInProductGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "GenderInProductGetDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "GenderInProductGetModalDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "GenderInProductGetShopPrDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "GenderStatus": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "type": "integer"
+    },
+    "ImageInProductGetBestSellerDto": {
+      "type": "object",
+      "properties": {
+        "imageStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ImageInProductGetDicountedDto": {
+      "type": "object",
+      "properties": {
+        "imageStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ImageInProductGetFeaturedDto": {
+      "type": "object",
+      "properties": {
+        "imageStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ImageInProductGetModalDto": {
+      "type": "object",
+      "properties": {
+        "imageStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ImageInProductGetMostViewDto": {
+      "type": "object",
+      "properties": {
+        "imageStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ImageinProductGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "imageStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ImageinProductGetDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "imageStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "OrderCreateDto": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductCreateReviewDto": {
+      "type": "object",
+      "properties": {
+        "productId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "costPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "gender": {
+          "$ref": "#/definitions/GenderInProductGetAllDto"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "isNew": {
+          "type": "boolean"
+        },
+        "isFeatured": {
+          "type": "boolean"
+        },
+        "viewCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "startedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "brand": {
+          "$ref": "#/definitions/BrandInProductGetAllDto"
+        },
+        "category": {
+          "$ref": "#/definitions/CategoryInProductGetAllDto"
+        },
+        "sizes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SizeInProductGetAllDto"
+          }
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ColorInProductGetAllDto"
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageinProductGetAllDto"
+          }
+        }
+      }
+    },
+    "ProductGetBestSellerDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "sellerCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageInProductGetBestSellerDto"
+          }
+        }
+      }
+    },
+    "ProductGetCompareModalDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "image": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductGetDicountedDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageInProductGetDicountedDto"
+          }
+        }
+      }
+    },
+    "ProductGetDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "costPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "gender": {
+          "$ref": "#/definitions/GenderInProductGetDto"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "isNew": {
+          "type": "boolean"
+        },
+        "isFeatured": {
+          "type": "boolean"
+        },
+        "viewCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "startedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "brand": {
+          "$ref": "#/definitions/BrandInProductGetDto"
+        },
+        "category": {
+          "$ref": "#/definitions/CategoryInProductGetDto"
+        },
+        "sizes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SizeInProductGetDto"
+          }
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ColorInProductGetDto"
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageinProductGetDto"
+          }
+        }
+      }
+    },
+    "ProductGetFeaturedDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isFeatured": {
+          "type": "boolean"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageInProductGetFeaturedDto"
+          }
+        }
+      }
+    },
+    "ProductGetModalDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brand": {
+          "$ref": "#/definitions/BrandInProductGetModalDto"
+        },
+        "category": {
+          "$ref": "#/definitions/CategoryInProductGetModalDto"
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ColorInProductGetModalDto"
+          }
+        },
+        "sizes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SizeInProductGetModalDto"
+          }
+        },
+        "gender": {
+          "$ref": "#/definitions/GenderInProductGetModalDto"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageInProductGetModalDto"
+          }
+        }
+      }
+    },
+    "ProductGetMostViewDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "viewCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageInProductGetMostViewDto"
+          }
+        }
+      }
+    },
+    "ProductGetNewDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageInProductGetDicountedDto"
+          }
+        }
+      }
+    },
+    "ProductGetPaginatedDto": {
+      "type": "object",
+      "properties": {
+        "pageScroll": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "perPage": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ProductGetReviewDto": {
+      "type": "object",
+      "properties": {
+        "appUserId": {
+          "type": "string"
+        },
+        "appUserUserName": {
+          "type": "string"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "text": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "ProductGetShopPrDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "category": {
+          "$ref": "#/definitions/CategoryInProductGetShopPrDto"
+        },
+        "gender": {
+          "$ref": "#/definitions/GenderInProductGetShopPrDto"
+        },
+        "brand": {
+          "$ref": "#/definitions/BrandInProductGetShopPrDto"
+        },
+        "sizes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SizeInProductGetShopPrDto"
+          }
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ShopCreateDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "count": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ShopPaginatedDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountedPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "rate": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "stockStatus": {
+          "type": "boolean"
+        },
+        "imageName": {
+          "type": "string"
+        }
+      }
+    },
+    "ShopPaginatedDtoPaginatedListDto": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShopPaginatedDto"
+          }
+        },
+        "pageIndex": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "totalPages": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "havNext": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "havPrev": {
+          "type": "boolean",
+          "readOnly": true
+        }
+      }
+    },
+    "SizeGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "SizeGetDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "productsCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "SizeInProductGetAllDto": {
+      "type": "object",
+      "properties": {
+        "sizeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SizeInProductGetDto": {
+      "type": "object",
+      "properties": {
+        "sizeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SizeInProductGetModalDto": {
+      "type": "object",
+      "properties": {
+        "sizeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SizeInProductGetShopPrDto": {
+      "type": "object",
+      "properties": {
+        "sizeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SizePostDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SizePutDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SliderGetAllDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "secondTitle": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "buttonUrl": {
+          "type": "string"
+        },
+        "buttonText": {
+          "type": "string"
+        },
+        "imageUri": {
+          "type": "string"
+        }
+      }
+    },
+    "SliderGetDto": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "secondTitle": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "buttonUrl": {
+          "type": "string"
+        },
+        "buttonText": {
+          "type": "string"
+        },
+        "imageUri": {
+          "type": "string"
+        },
+        "bgColor": {
+          "type": "string"
+        }
+      }
+    },
+    "UserConfirmDto": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userName": {
+          "type": "string"
+        }
+      }
+    },
+    "UserForgotPasswordDto": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "UserGetDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "UserLoginDto": {
+      "type": "object",
+      "properties": {
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "UserProfileDto": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "currentPassword": {
+          "type": "string"
+        },
+        "newPassword": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        }
+      }
+    },
+    "UserRegisterDto": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        }
+      }
+    },
+    "UserResetPasswordDto": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      }
+    },
+    "UserSendAgainDto": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": { }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

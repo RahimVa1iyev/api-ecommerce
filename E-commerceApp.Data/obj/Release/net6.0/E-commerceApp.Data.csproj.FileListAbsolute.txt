@@ -1,0 +1,17 @@
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\bin\Release\net6.0\E-commerceApp.Data.deps.json
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\bin\Release\net6.0\E-commerceApp.Data.runtimeconfig.json
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\bin\Release\net6.0\E-commerceApp.Data.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\bin\Release\net6.0\E-commerceApp.Data.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\bin\Release\net6.0\E-commerceApp.Core.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\bin\Release\net6.0\E-commerceApp.Core.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.csproj.CopyComplete
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\refint\E-commerceApp.Data.dll
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.pdb
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\E-commerceApp.Data.genruntimeconfig.cache
+C:\Users\ASUS\source\repos\E-commerceApp.Api\E-commerceApp.Data\obj\Release\net6.0\ref\E-commerceApp.Data.dll
